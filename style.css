@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+}/*universal selector to normalize the box model for each image.*/
+
+#gallery img{
+    width:25%;
+    height: 300px;
+    object-fit: cover;
+    margin-top: 8px;
+    padding: 0 4px;
+    border-radius: 10px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ebe7e7;
+}
+.header {
+    padding:32px;
+    text-align: center;
+    background-color: #e0dddd;
+}
+#gallery{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: row;
+    padding: 0 4px;
+}/*will wrap since the width in gall img was set to 25%*/
+@media (max-width:800px) {
+    #gallery img {
+        width: 50%;
+    } 
+}/*for mobile browsers set to 800px or smaller will convert to two columns.*/
+@media (max-width:600px) {
+    #gallery img {
+      width: 100%;
+    }
+ }
